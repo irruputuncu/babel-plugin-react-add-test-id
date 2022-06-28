@@ -1,6 +1,6 @@
 # babel-plugin-react-add-test-id
 
-Forked from <https://github.com/irruputuncu/babel-plugin-react-add-test-id>
+Forked from <https://github.com/welldone-software/babel-plugin-react-add-test-id>
 
 ## Example
 
