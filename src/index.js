@@ -49,6 +49,12 @@ export default function(
             passDownComponentName(path, componentName, mode, delimiter);
           },
           JSXElement(path) {
+            // Allow override through manual addition of data-test-id
+            const existingTestId = path.node.openingElement.attributes.find(
+              node => node.name && node.name.name === attrName
+            );
+            if (existingTestId) return;
+
             const componentName = path.node.openingElement.name.name || "";
             const isRoot =
               isRootElement || path.parent.type === "ReturnStatement";
